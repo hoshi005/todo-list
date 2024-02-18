@@ -15,6 +15,7 @@ struct Home: View {
     
     /// Model Context
     @Environment(\.modelContext) private var context
+    @State private var showAll: Bool = false
     
     var body: some View {
         List {
@@ -25,7 +26,7 @@ struct Home: View {
             }
             
             /// Completed List
-            CompletedTodoList()
+            CompletedTodoList(showAll: $showAll)
         }
         .toolbar {
             ToolbarItem(placement: .bottomBar) {

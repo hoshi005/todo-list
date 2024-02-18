@@ -18,12 +18,16 @@ struct TodoRowView: View {
         HStack(spacing: 8.0) {
             // キーボードが表示中は非表示にする.
             if !isActive && !todo.task.isEmpty {
-                Button(action: {}, label: {
+                // タスクのON/OFF切り替え.
+                Button(action: {
+                    todo.isCompleted.toggle()
+                    todo.updatedAt = .now
+                }, label: {
                     Image(systemName: todo.isCompleted ? "checkmark.circle.fill" : "circle")
                         .font(.title2)
                         .padding(3)
                         .contentShape(.rect)
-                        .foregroundStyle(todo.isCompleted ? .gray : .primary)
+                        .foregroundStyle(todo.isCompleted ? .gray : .accentColor)
                         .contentTransition(.symbolEffect(.replace))
                 })
             }
