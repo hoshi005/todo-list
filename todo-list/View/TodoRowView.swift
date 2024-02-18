@@ -12,6 +12,7 @@ struct TodoRowView: View {
     @Bindable var todo: Todo
     @FocusState private var isActive: Bool
     @Environment(\.modelContext) private var context
+    @Environment(\.scenePhase) private var phase
     
     var body: some View {
         HStack(spacing: 8.0) {
@@ -72,6 +73,12 @@ struct TodoRowView: View {
         }
         .onSubmit(of: .text) {
             if todo.task.isEmpty {
+                context.delete(todo)
+            }
+        }
+        .onChange(of: phase) { oldValue, newValue in
+            // アプリが非アクティブになったら編集中のタスクを消す.
+            if newValue != .active && todo.task.isEmpty {
                 context.delete(todo)
             }
         }
