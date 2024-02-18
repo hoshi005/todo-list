@@ -38,7 +38,8 @@ struct CompletedTodoList: View {
                 
                 Spacer()
                 
-                if showAll {
+                // 全表示状態で、かつ完了タスクがある場合に表示する.
+                if showAll && !completedList.isEmpty {
                     Button("Show Recents") {
                         withAnimation(.snappy) {
                             showAll = false
@@ -48,7 +49,7 @@ struct CompletedTodoList: View {
             }
             .font(.caption)
         } footer: {
-            if completedList.count == limit && !showAll {
+            if completedList.count == limit && !showAll && !completedList.isEmpty {
                 HStack {
                     Text("Showing Recent \(limit) Tasks")
                         .foregroundStyle(.gray)
