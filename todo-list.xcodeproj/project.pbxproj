@@ -12,6 +12,7 @@
 		EFE7D7F52B8193A300D1F1C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFE7D7F42B8193A300D1F1C9 /* Assets.xcassets */; };
 		EFE7D7F82B8193A300D1F1C9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFE7D7F72B8193A300D1F1C9 /* Preview Assets.xcassets */; };
 		EFE7D8012B81956F00D1F1C9 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE7D8002B81956F00D1F1C9 /* Todo.swift */; };
+		EFE7D8042B81971900D1F1C9 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE7D8032B81971900D1F1C9 /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		EFE7D7F72B8193A300D1F1C9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EFE7D7FE2B8194CE00D1F1C9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EFE7D8002B81956F00D1F1C9 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		EFE7D8032B81971900D1F1C9 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				EFE7D7FF2B81956400D1F1C9 /* Model */,
+				EFE7D8022B81971100D1F1C9 /* View */,
 				EFE7D7F02B8193A100D1F1C9 /* todo_listApp.swift */,
 				EFE7D7F22B8193A100D1F1C9 /* ContentView.swift */,
 				EFE7D7F42B8193A300D1F1C9 /* Assets.xcassets */,
@@ -78,6 +81,14 @@
 				EFE7D8002B81956F00D1F1C9 /* Todo.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		EFE7D8022B81971100D1F1C9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EFE7D8032B81971900D1F1C9 /* Home.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +163,7 @@
 			files = (
 				EFE7D7F32B8193A100D1F1C9 /* ContentView.swift in Sources */,
 				EFE7D8012B81956F00D1F1C9 /* Todo.swift in Sources */,
+				EFE7D8042B81971900D1F1C9 /* Home.swift in Sources */,
 				EFE7D7F12B8193A100D1F1C9 /* todo_listApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

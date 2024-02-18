@@ -14,6 +14,7 @@ class Todo {
     var task: String
     var isCompleted: Bool = false
     var priority: Priority = Priority.normal
+    var updatedAt: Date = Date.now
     
     init(taskId: String, task: String, isCompleted: Bool, priority: Priority) {
         self.taskId = taskId
