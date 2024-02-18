@@ -16,7 +16,9 @@ struct Home: View {
     var body: some View {
         List {
             Section(activeSectionTitle) {
-                
+                ForEach(activeList) {
+                    TodoRowView(todo: $0)
+                }
             }
             
             /// Completed List
