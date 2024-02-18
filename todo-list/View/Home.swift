@@ -18,6 +18,9 @@ struct Home: View {
             Section(activeSectionTitle) {
                 
             }
+            
+            /// Completed List
+            CompletedTodoList()
         }
         .toolbar {
             ToolbarItem(placement: .bottomBar) {
