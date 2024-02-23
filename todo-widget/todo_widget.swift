@@ -8,6 +8,7 @@
 import WidgetKit
 import SwiftUI
 import SwiftData
+import AppIntents
 
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
@@ -41,9 +42,9 @@ struct todo_widgetEntryView : View {
         VStack {
             ForEach(activeList) { todo in
                 HStack(spacing: 8.0) {
-                    Button(action: {}, label: {
+                    Button(intent: ToggleButton(id: todo.taskId)) {
                         Image(systemName: "circle")
-                    })
+                    }
                     .font(.callout)
                     .tint(todo.priority.color.gradient)
                     .buttonBorderShape(.circle)
@@ -54,9 +55,17 @@ struct todo_widgetEntryView : View {
                     
                     Spacer()
                 }
+                .transition(.push(from: .bottom))
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+        .overlay {
+            if activeList.isEmpty {
+                Text("No Tasks 🎉")
+                    .font(.callout)
+                    .transition(.push(from: .bottom))
+            }
+        }
     }
     
     static var todoDescriptor: FetchDescriptor<Todo> {
@@ -79,6 +88,7 @@ struct todo_widget: Widget {
                 // setting up SwiftData Container
                 .modelContainer(for: Todo.self)
         }
+        .supportedFamilies([.systemMedium])
         .configurationDisplayName("Tasks")
         .description("This is a Todo List")
     }
@@ -88,4 +98,30 @@ struct todo_widget: Widget {
     todo_widget()
 } timeline: {
     SimpleEntry(date: .now)
+}
+
+struct ToggleButton: AppIntent {
+    static var title: LocalizedStringResource = .init(stringLiteral: "Toggle's Todo State")
+    
+    @Parameter(title: "Todo ID")
+    var id: String
+    
+    init(){}
+    
+    init(id: String) {
+        self.id = id
+    }
+    
+    func perform() async throws -> some IntentResult {
+        
+        let context = try ModelContext(.init(for: Todo.self))
+        let descriptor = FetchDescriptor(predicate: #Predicate<Todo> { $0.taskId == id })
+        if let todo = try context.fetch(descriptor).first {
+            todo.isCompleted = true
+            todo.updatedAt = .now
+            
+            try context.save()
+        }
+        return .result()
+    }
 }
