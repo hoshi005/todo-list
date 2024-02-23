@@ -17,10 +17,11 @@
 		EFE7D8082B819EC800D1F1C9 /* TodoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE7D8072B819EC800D1F1C9 /* TodoRowView.swift */; };
 		EFE7D82E2B8841C700D1F1C9 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE7D82D2B8841C700D1F1C9 /* WidgetKit.framework */; };
 		EFE7D8302B8841C700D1F1C9 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE7D82F2B8841C700D1F1C9 /* SwiftUI.framework */; };
-		EFE7D8332B8841C700D1F1C9 /* todo_widgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE7D8322B8841C700D1F1C9 /* todo_widgetBundle.swift */; };
-		EFE7D8352B8841C700D1F1C9 /* todo_widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE7D8342B8841C700D1F1C9 /* todo_widget.swift */; };
 		EFE7D8372B8841C800D1F1C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFE7D8362B8841C800D1F1C9 /* Assets.xcassets */; };
 		EFE7D83B2B8841C800D1F1C9 /* todo-widgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = EFE7D82B2B8841C700D1F1C9 /* todo-widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EFE7D8422B88421800D1F1C9 /* todo_widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE7D8402B88421800D1F1C9 /* todo_widget.swift */; };
+		EFE7D8432B88421800D1F1C9 /* todo_widgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE7D8412B88421800D1F1C9 /* todo_widgetBundle.swift */; };
+		EFE7D8442B88423800D1F1C9 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE7D8002B81956F00D1F1C9 /* Todo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,10 +62,10 @@
 		EFE7D82B2B8841C700D1F1C9 /* todo-widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "todo-widgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFE7D82D2B8841C700D1F1C9 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		EFE7D82F2B8841C700D1F1C9 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		EFE7D8322B8841C700D1F1C9 /* todo_widgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todo_widgetBundle.swift; sourceTree = "<group>"; };
-		EFE7D8342B8841C700D1F1C9 /* todo_widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todo_widget.swift; sourceTree = "<group>"; };
 		EFE7D8362B8841C800D1F1C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFE7D8382B8841C800D1F1C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFE7D8402B88421800D1F1C9 /* todo_widget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = todo_widget.swift; sourceTree = "<group>"; };
+		EFE7D8412B88421800D1F1C9 /* todo_widgetBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = todo_widgetBundle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,8 +159,8 @@
 		EFE7D8312B8841C700D1F1C9 /* todo-widget */ = {
 			isa = PBXGroup;
 			children = (
-				EFE7D8322B8841C700D1F1C9 /* todo_widgetBundle.swift */,
-				EFE7D8342B8841C700D1F1C9 /* todo_widget.swift */,
+				EFE7D8412B88421800D1F1C9 /* todo_widgetBundle.swift */,
+				EFE7D8402B88421800D1F1C9 /* todo_widget.swift */,
 				EFE7D8362B8841C800D1F1C9 /* Assets.xcassets */,
 				EFE7D8382B8841C800D1F1C9 /* Info.plist */,
 			);
@@ -280,8 +281,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFE7D8332B8841C700D1F1C9 /* todo_widgetBundle.swift in Sources */,
-				EFE7D8352B8841C700D1F1C9 /* todo_widget.swift in Sources */,
+				EFE7D8432B88421800D1F1C9 /* todo_widgetBundle.swift in Sources */,
+				EFE7D8442B88423800D1F1C9 /* Todo.swift in Sources */,
+				EFE7D8422B88421800D1F1C9 /* todo_widget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
