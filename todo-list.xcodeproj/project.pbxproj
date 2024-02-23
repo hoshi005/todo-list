@@ -23,6 +23,7 @@
 		EFE7D81B2B883FD100D1F1C9 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE7D81A2B883FD100D1F1C9 /* AppIntent.swift */; };
 		EFE7D81D2B883FD200D1F1C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFE7D81C2B883FD200D1F1C9 /* Assets.xcassets */; };
 		EFE7D8212B883FD200D1F1C9 /* todo-widgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = EFE7D80D2B883FD100D1F1C9 /* todo-widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EFE7D8262B88407000D1F1C9 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE7D8002B81956F00D1F1C9 /* Todo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -290,6 +291,7 @@
 				EFE7D81B2B883FD100D1F1C9 /* AppIntent.swift in Sources */,
 				EFE7D8152B883FD100D1F1C9 /* todo_widgetBundle.swift in Sources */,
 				EFE7D8192B883FD100D1F1C9 /* todo_widget.swift in Sources */,
+				EFE7D8262B88407000D1F1C9 /* Todo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
