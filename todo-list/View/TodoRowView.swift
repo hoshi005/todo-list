@@ -36,6 +36,7 @@ struct TodoRowView: View {
                 .strikethrough(todo.isCompleted)
                 .foregroundStyle(todo.isCompleted ? .gray : .primary)
                 .focused($isActive)
+                .submitLabel(.done)
             
             // キーボードが表示中は非表示にする.
             if !isActive && !todo.task.isEmpty {
