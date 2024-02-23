@@ -66,6 +66,8 @@
 		EFE7D8382B8841C800D1F1C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFE7D8402B88421800D1F1C9 /* todo_widget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = todo_widget.swift; sourceTree = "<group>"; };
 		EFE7D8412B88421800D1F1C9 /* todo_widgetBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = todo_widgetBundle.swift; sourceTree = "<group>"; };
+		EFE7D8452B88475B00D1F1C9 /* todo-list.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "todo-list.entitlements"; sourceTree = "<group>"; };
+		EFE7D8472B88487B00D1F1C9 /* todo-widgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "todo-widgetExtension.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				EFE7D7F02B8193A100D1F1C9 /* todo_listApp.swift */,
 				EFE7D7F22B8193A100D1F1C9 /* ContentView.swift */,
 				EFE7D7F42B8193A300D1F1C9 /* Assets.xcassets */,
+				EFE7D8452B88475B00D1F1C9 /* todo-list.entitlements */,
 				EFE7D7F62B8193A300D1F1C9 /* Preview Content */,
 			);
 			path = "todo-list";
@@ -162,6 +165,7 @@
 				EFE7D8412B88421800D1F1C9 /* todo_widgetBundle.swift */,
 				EFE7D8402B88421800D1F1C9 /* todo_widget.swift */,
 				EFE7D8362B8841C800D1F1C9 /* Assets.xcassets */,
+				EFE7D8472B88487B00D1F1C9 /* todo-widgetExtension.entitlements */,
 				EFE7D8382B8841C800D1F1C9 /* Info.plist */,
 			);
 			path = "todo-widget";
@@ -423,6 +427,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "todo-list/todo-list.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"todo-list/Preview Content\"";
@@ -453,6 +458,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "todo-list/todo-list.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"todo-list/Preview Content\"";
@@ -482,6 +488,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "todo-widget/todo-widgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CFBV6A4UV7;
@@ -509,6 +516,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "todo-widget/todo-widgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CFBV6A4UV7;
