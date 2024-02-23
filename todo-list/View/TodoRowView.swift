@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct TodoRowView: View {
     
@@ -22,6 +23,7 @@ struct TodoRowView: View {
                 Button(action: {
                     todo.isCompleted.toggle()
                     todo.updatedAt = .now
+                    WidgetCenter.shared.reloadAllTimelines()
                 }, label: {
                     Image(systemName: todo.isCompleted ? "checkmark.circle.fill" : "circle")
                         .font(.title2)
@@ -61,9 +63,8 @@ struct TodoRowView: View {
                         .padding(3)
                         .contentShape(.rect)
                         .foregroundStyle(todo.priority.color.gradient)
+                }
             }
-            }
-
         }
         .listRowInsets(.init(top: 10, leading: 10, bottom: 10, trailing: 10))
         .animation(.snappy, value: isActive)
@@ -73,19 +74,25 @@ struct TodoRowView: View {
         .swipeActions(edge: .trailing, allowsFullSwipe: false) {
             Button("", systemImage: "trash") {
                 context.delete(todo)
+                WidgetCenter.shared.reloadAllTimelines()
             }
             .tint(.red)
         }
         .onSubmit(of: .text) {
             if todo.task.isEmpty {
                 context.delete(todo)
+                WidgetCenter.shared.reloadAllTimelines()
             }
         }
         .onChange(of: phase) { oldValue, newValue in
             // アプリが非アクティブになったら編集中のタスクを消す.
             if newValue != .active && todo.task.isEmpty {
                 context.delete(todo)
+                WidgetCenter.shared.reloadAllTimelines()
             }
+        }
+        .task {
+            todo.isCompleted = todo.isCompleted
         }
     }
 }
